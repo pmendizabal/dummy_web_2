@@ -15,16 +15,17 @@
         header {
             background-color: #050521;
             color: white;
-            padding: 1px 10px;
+            padding: 10px;
+            text-align: center; /* Center align text */
         }
         header h1 {
             margin: 0;
-            font-size: 1.8em; /* Adjusted for smaller screens */
+            font-size: 1.8em; /* Adjust font size */
         }
         nav ul {
             list-style: none;
             padding: 0;
-            text-align: center; /* Center nav items on small screens */
+            margin: 0;
         }
         nav ul li {
             display: inline;
@@ -45,7 +46,7 @@
         }
         .hero h2 {
             margin: 0;
-            font-size: 2.5em; /* Adjusted for smaller screens */
+            font-size: 2.5em; /* Adjust font size for mobile */
         }
         .container {
             padding: 20px;
@@ -65,7 +66,7 @@
         }
         .service h3 {
             margin-top: 0;
-            font-size: 1.2em; /* Adjusted for smaller screens */
+            font-size: 1.2em; /* Adjust font size for mobile */
         }
         footer {
             background-color: #222;
@@ -79,25 +80,37 @@
 
         /* Responsive Styles */
         @media (min-width: 768px) {
+            header {
+                padding: 15px 30px; /* More padding on tablets */
+            }
+            header h1 {
+                font-size: 2.2em; /* Slightly larger font size */
+            }
             .hero h2 {
                 font-size: 3.5em; /* Adjusted for medium screens */
             }
             .services {
                 flex-direction: row; /* Display services side by side on larger screens */
                 flex-wrap: wrap;
+                gap: 20px; /* Add more space between service blocks */
             }
             .service {
-                flex: 1 1 calc(50% - 20px); /* Adjust for 2 items per row on larger screens */
-                margin: 10px;
+                flex: 1 1 calc(50% - 20px); /* Two items per row on larger screens */
             }
         }
 
         @media (min-width: 1024px) {
+            header {
+                padding: 20px 40px; /* More padding on desktops */
+            }
+            header h1 {
+                font-size: 2.5em; /* Larger font size */
+            }
             .hero h2 {
-                font-size: 4.5em; /* Adjusted for larger screens */
+                font-size: 4.5em; /* Larger font size for large screens */
             }
             .service {
-                flex: 1 1 calc(25% - 20px); /* Adjust for 4 items per row on larger screens */
+                flex: 1 1 calc(25% - 20px); /* Four items per row on large screens */
             }
         }
     </style>
