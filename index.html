@@ -19,10 +19,12 @@
         }
         header h1 {
             margin: 0;
+            font-size: 1.8em; /* Adjusted for smaller screens */
         }
         nav ul {
             list-style: none;
             padding: 0;
+            text-align: center; /* Center nav items on small screens */
         }
         nav ul li {
             display: inline;
@@ -33,35 +35,37 @@
             text-decoration: none;
         }
         .hero {
-            background-image: url('https://coolbackgrounds.io/images/backgrounds/index/compute-ea4c57a4.png');
-            color: white;
+            color: black;
             text-align: center;
             padding: 55px 20px;
+            background-image: url('https://coolbackgrounds.io/images/backgrounds/index/compute-ea4c57a4.png');
+            background-size: cover; /* Ensure the image covers the entire section */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
         }
         .hero h2 {
             margin: 0;
-            font-size: 4.5em;
+            font-size: 2.5em; /* Adjusted for smaller screens */
         }
         .container {
             padding: 20px;
         }
         .services {
             display: flex;
-            justify-content: space-between; /* Changed from space-around to space-between */
-            flex-wrap: wrap;
+            flex-direction: column; /* Stack services vertically on small screens */
+            gap: 10px; /* Add some space between service blocks */
         }
         .service {
             background-color: #f4f4f4;
             border: 1px solid #ddd;
             border-radius: 5px;
             padding: 20px;
-            margin: 10px;
-            flex: 1 1 calc(25% - 20px); /* Adjusted for 4 items */
-            box-sizing: border-box;
+            margin: 0;
             text-align: center; /* Center the text */
         }
         .service h3 {
             margin-top: 0;
+            font-size: 1.2em; /* Adjusted for smaller screens */
         }
         footer {
             background-color: #222;
@@ -71,6 +75,30 @@
         }
         footer p {
             margin: 0;
+        }
+
+        /* Responsive Styles */
+        @media (min-width: 768px) {
+            .hero h2 {
+                font-size: 3.5em; /* Adjusted for medium screens */
+            }
+            .services {
+                flex-direction: row; /* Display services side by side on larger screens */
+                flex-wrap: wrap;
+            }
+            .service {
+                flex: 1 1 calc(50% - 20px); /* Adjust for 2 items per row on larger screens */
+                margin: 10px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .hero h2 {
+                font-size: 4.5em; /* Adjusted for larger screens */
+            }
+            .service {
+                flex: 1 1 calc(25% - 20px); /* Adjust for 4 items per row on larger screens */
+            }
         }
     </style>
 </head>
@@ -122,5 +150,6 @@
     </footer>
 </body>
 </html>
+
 
 
